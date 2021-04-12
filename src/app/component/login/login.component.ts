@@ -59,7 +59,6 @@ export class LoginComponent implements OnInit {
     this.sign_in_btn.addEventListener("click", () => {
       this.container.classList.remove("sign-up-mode");
     });
-
   }
 
 
