@@ -87,6 +87,13 @@ form.sign-in-form {
   font-size: 1.1rem;
 }
 
+svg:not(:root).svg-inline--fa {
+  width: 49px;
+  height: 17px;
+  margin: auto;
+  color: #5b5757;
+}
+
 .input-field input {
   background: none;
   outline: none;
