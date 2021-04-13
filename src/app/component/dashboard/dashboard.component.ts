@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
@@ -8,9 +9,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   @Output() isLogout = new EventEmitter<void>()
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    if (localStorage.getItem('user')) {
+      this.router.navigate(['dashboard']);
+    }
   }
 
   logout() {
