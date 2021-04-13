@@ -3,7 +3,7 @@
   display: flex;
   height: 50px;
   width: 100%;
-  background-color: rgb(129, 127, 255);
+  background-color: #A1A5A1;
   margin-bottom: 25px;
 }
 
@@ -38,9 +38,7 @@ a {
   cursor: pointer;
 }
 
-
 // Card
-
 
 .card__container {
   display: grid;
@@ -54,7 +52,7 @@ a {
 }
 
 .card {
-  background-color: #444;
+  background-color: #292929;
   color: #fff;
   border-radius: 5px;
   padding: 2px;
@@ -65,14 +63,14 @@ a {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 40px;
   z-index: 2;
 }
 
 .card__git__hub {
-  background-color: aquamarine;
+  background-color: #D5D8D5;
   border-radius: 4px;
   width: 52px;
+  height: 41px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +78,6 @@ a {
 
 .card__one__site {
   cursor: pointer;
-
 }
 
 .card__label {
@@ -93,21 +90,139 @@ a {
   color: white;
 }
 
-.one, .two {
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve,
+.thirteen,
+.fourteen {
   width: 100%;
   height: 162px;
   border-radius: 4px;
 }
 
 .one {
-  background: url("./../../../assets/img-projects/angular-card-component.png") no-repeat;
+  background: url("./../../../assets/img-projects/angular-card-component.png")
+    no-repeat;
   background-size: cover;
 }
 
+.two {
+  background: url("./../../../assets/img-projects/grid-angular.png") no-repeat;
+  background-size: cover;
+}
+
+.three {
+  background: url("./../../../assets/img-projects/profile-card.png") no-repeat;
+  background-size: cover;
+}
+
+.four {
+  background: url("./../../../assets/img-projects/angular-launch-countdown.png")
+    no-repeat;
+  background-size: cover;
+}
+
+.five {
+  background: url("./../../../assets/img-projects/room-homepage-angular.png")
+    no-repeat;
+  background-size: cover;
+}
+
+.six {
+  background: url("./../../../assets/img-projects/pricing-angular.png")
+    no-repeat;
+  background-size: cover;
+}
+
+.seven {
+  background: url("./../../../assets/img-projects/switch-theme-angular.png")
+    no-repeat;
+  background-size: cover;
+}
+
+.eight {
+  background: url("./../../../assets/img-projects/angular-login-new.png")
+  no-repeat;
+  background-size: cover;
+}
+
+.nine {
+  background: url("./../../../assets/img-projects/loop-studios-angular.png")
+  no-repeat;
+  background-size: cover;
+}
+
+.ten {
+  background: url("./../../../assets/img-projects/angular-price-io.png")
+  no-repeat;
+  background-size: cover;
+}
+
+.eleven {
+  background: url("./../../../assets/img-projects/angular-paligo.png")
+  no-repeat;
+  background-size: cover;
+}
+
+.twelve {
+  background: url("./../../../assets/img-projects/yelp-angular.png")
+  no-repeat;
+  background-size: cover;
+}
+
+.thirteen {
+  background: url("./../../../assets/img-projects/routing-app.png")
+  no-repeat;
+  background-size: cover;
+}
+
+.fourteen {
+  background: url("./../../../assets/img-projects/angular-firebase.png")
+  no-repeat;
+  background-size: cover;
+}
 
 @media (max-width: 430px) {
   .card__container {
     grid-template-columns: none;
     grid-template-rows: repeat(14, 220px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight,
+  .nine,
+  .ten,
+  .eleven,
+  .twelve,
+  .thirteen,
+  .fourteen {
+    height: 100%;
+  }
+
+  .card:hover {
+    .card__label {
+      z-index: 3;
+      margin-top: -55px;
+      background: gray;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
   }
 }
