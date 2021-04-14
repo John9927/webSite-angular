@@ -9,19 +9,16 @@ export class OrderingDirective {
 
   dateInput;
   dateString;
-
+  newDate;
+  dates;
   constructor() { }
 
   ngOnInit() {
-    this.getTimeDifference();
-  }
-
-  private getTimeDifference() {
     this.dateString = this.order;
-    let newDate = new Date(this.dateString);
-    this.dateString = newDate.getTime();
-    this.Order = this.dateString;
-    console.log(this.dateString);
+    console.log("dateString Before", this.dateString)
+    this.newDate = new Date(this.dateString);
+    this.dates = this.newDate.getTime() / 10000;
+    this.Order = this.dates;
+    console.log("Order: ",this.Order)
   }
-
 }
