@@ -15,10 +15,8 @@ export class OrderingDirective {
 
   ngOnInit() {
     this.dateString = this.order;
-    console.log("dateString Before", this.dateString)
     this.newDate = new Date(this.dateString);
     this.dates = this.newDate.getTime() / 10000;
     this.Order = this.dates;
-    console.log("Order: ",this.Order)
   }
 }
