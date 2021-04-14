@@ -3,7 +3,7 @@
   display: flex;
   height: 50px;
   width: 100%;
-  background-color: #A1A5A1;
+  background-color: #a1a5a1;
   margin-bottom: 25px;
 }
 
@@ -14,6 +14,14 @@
   margin: auto;
   height: 50px;
   align-items: center;
+}
+
+.order1 {
+  order: 1;
+}
+
+.order2 {
+  order: 2;
 }
 
 .header__logo {
@@ -61,7 +69,7 @@ a {
 
   &:hover {
     background-color: #535353;
-    transition: all 0.3s ease ;
+    transition: all 0.3s ease;
   }
 }
 
@@ -73,7 +81,7 @@ a {
 }
 
 .card__git__hub {
-  background-color: #D5D8D5;
+  background-color: #d5d8d5;
   border-radius: 4px;
   width: 52px;
   height: 41px;
@@ -86,7 +94,6 @@ a {
     transition: all 0.2s ease;
   }
 }
-
 
 .card__one__site {
   cursor: pointer;
@@ -101,7 +108,6 @@ a {
   font-size: 20px;
   color: white;
   transition: all 0.3s ease;
-
 }
 
 .one,
@@ -165,43 +171,40 @@ a {
 
 .eight {
   background: url("./../../../assets/img-projects/angular-login-new.png")
-  no-repeat;
+    no-repeat;
   background-size: cover;
 }
 
 .nine {
   background: url("./../../../assets/img-projects/loop-studios-angular.png")
-  no-repeat;
+    no-repeat;
   background-size: cover;
 }
 
 .ten {
   background: url("./../../../assets/img-projects/angular-price-io.png")
-  no-repeat;
+    no-repeat;
   background-size: cover;
 }
 
 .eleven {
-  background: url("./../../../assets/img-projects/angular-paligo.png")
-  no-repeat;
+  background: url("./../../../assets/img-projects/angular-paligo.png") no-repeat;
   background-size: cover;
 }
 
 .twelve {
-  background: url("./../../../assets/img-projects/yelp-angular.png")
-  no-repeat;
+  background: url("./../../../assets/img-projects/yelp-angular.png") no-repeat;
   background-size: cover;
 }
 
 .thirteen {
-  background: url("./../../../assets/img-projects/routing-app.png")
-  no-repeat;
+  background: url("./../../../assets/img-projects/routing-app.png") no-repeat;
   background-size: cover;
 }
 
 .fourteen {
   background: url("./../../../assets/img-projects/angular-firebase.png")
-  no-repeat;
+    no-repeat;
   background-size: cover;
 }
 
