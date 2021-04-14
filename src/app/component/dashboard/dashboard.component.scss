@@ -60,6 +60,21 @@ a {
   margin-bottom: 20px;
 }
 
+.card__date__container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 41px;
+  margin-top: -41px;
+  border-radius: 4px;
+  opacity: 0.6;
+  width: 88px;
+  background: #8b8b8b;
+  color: white;
+  font-size: 15px;
+}
+
 .card {
   background-color: #292929;
   color: #fff;
@@ -70,8 +85,14 @@ a {
   &:hover {
     background-color: #535353;
     transition: all 0.3s ease;
+
+    .card__date__container {
+      opacity: 1;
+    }
   }
 }
+
+
 
 .card__container__git__hub {
   display: flex;
@@ -237,6 +258,10 @@ a {
     display: none;
   }
 
+  .card__date__container {
+    display: none;
+  }
+
   .card:hover {
     .one,
     .two,
@@ -253,6 +278,10 @@ a {
     .thirteen,
     .fourteen {
       opacity: 0.6;
+
+      .card__date__container {
+        display: flex;
+      }
     }
 
     .card__label {
