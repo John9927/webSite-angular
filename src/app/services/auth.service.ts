@@ -2,12 +2,18 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(public firebaseAuth: AngularFireAuth, public router: Router,) { }
+  constructor(public firebaseAuth: AngularFireAuth, public router: Router, private firestore: AngularFirestore) { }
+
+
+  getSiteWeb() {
+    return this.firestore.collection('webSite').get();
+  }
 
   /* Sign up */
   async signup(email: string, password: string) {

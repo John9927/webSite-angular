@@ -20,7 +20,7 @@
   height: 41px;
   margin-top: -41px;
   border-radius: 4px;
-  opacity: 0.6;
+  opacity: 1;
   width: 88px;
   background: #8b8b8b;
   color: white;
@@ -54,13 +54,12 @@ a {
   }
 }
 
-
-
 .card__container__git__hub {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   z-index: 2;
+  margin-top: -164px;
 }
 
 .card__git__hub {
@@ -86,11 +85,13 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
+  // position: relative;
   height: 55px;
   align-items: center;
   font-size: 20px;
   color: white;
   transition: all 0.3s ease;
+  margin-top: 119px;
 }
 
 .one,
@@ -110,85 +111,6 @@ a {
   width: 100%;
   height: 162px;
   border-radius: 4px;
-}
-
-.one {
-  background: url("./../../../assets/img-projects/angular-card-component.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.two {
-  background: url("./../../../assets/img-projects/grid-angular.png") no-repeat;
-  background-size: cover;
-}
-
-.three {
-  background: url("./../../../assets/img-projects/profile-card.png") no-repeat;
-  background-size: cover;
-}
-
-.four {
-  background: url("./../../../assets/img-projects/angular-launch-countdown.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.five {
-  background: url("./../../../assets/img-projects/room-homepage-angular.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.six {
-  background: url("./../../../assets/img-projects/pricing-angular.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.seven {
-  background: url("./../../../assets/img-projects/switch-theme-angular.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.eight {
-  background: url("./../../../assets/img-projects/angular-login-new.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.nine {
-  background: url("./../../../assets/img-projects/loop-studios-angular.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.ten {
-  background: url("./../../../assets/img-projects/angular-price-io.png")
-    no-repeat;
-  background-size: cover;
-}
-
-.eleven {
-  background: url("./../../../assets/img-projects/angular-paligo.png") no-repeat;
-  background-size: cover;
-}
-
-.twelve {
-  background: url("./../../../assets/img-projects/yelp-angular.png") no-repeat;
-  background-size: cover;
-}
-
-.thirteen {
-  background: url("./../../../assets/img-projects/routing-app.png") no-repeat;
-  background-size: cover;
-}
-
-.fourteen {
-  background: url("./../../../assets/img-projects/angular-firebase.png")
-    no-repeat;
-  background-size: cover;
 }
 
 @media (max-width: 430px) {
@@ -213,7 +135,19 @@ a {
   .twelve,
   .thirteen,
   .fourteen {
-    height: 100%;
+    height: 217px;
+  }
+
+  .card__label {
+    display: none;
+  }
+
+  .card__date__container {
+    display: none;
+  }
+
+  .card__git__hub {
+    display: none;
   }
 
   .card__label {
@@ -225,6 +159,36 @@ a {
   }
 
   .card:hover {
+    .card__label {
+      margin-top: 47px;
+      opacity: 1;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      background: gray;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .card__git__hub {
+      background-color: #d5d8d5;
+      border-radius: 4px;
+      width: 52px;
+      height: 41px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -55px;
+      margin-left: -52px;
+      position: absolute;
+    }
+
+    .card__date__container {
+      display: flex;
+      opacity: 1;
+      margin-top: -56px;
+    }
     .one,
     .two,
     .three,
@@ -241,21 +205,6 @@ a {
     .fourteen {
       opacity: 0.6;
 
-      .card__date__container {
-        display: flex;
-      }
-    }
-
-    .card__label {
-      opacity: 1;
-      position: relative;
-      z-index: 3;
-      display: flex;
-      margin-top: -55px;
-      justify-content: center;
-      background: gray;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
     }
   }
 }

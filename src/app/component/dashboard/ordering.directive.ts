@@ -4,7 +4,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
   selector: '[appOrdering]'
 })
 export class OrderingDirective {
-  @Input() order: any;
+  @Input('appOrdering') order: any;
   @HostBinding('style.order') Order: string;
   dateInput;
   dateString;
