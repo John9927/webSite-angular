@@ -30,14 +30,12 @@ export class LoginComponent implements OnInit {
 
   async onSignIn(email: string, password: string) {
     await this.authService.signin(email, password)
-    if(this.authService.isLoggedIn) {
-    }
+
   }
 
   async onSignUp(email: string, password: string) {
     await this.authService.signup(email, password)
-    if (this.authService.isLoggedIn) {
-    }
+
   }
 
   createUserViaGoogle() {

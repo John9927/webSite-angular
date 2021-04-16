@@ -35,12 +35,17 @@
         <input type="submit" (click)="onSignUp(emailSignUp.value, passwordSignUp.value)" class="btn" value="Sign up"/>
         <p class="social-text">Or Sign up with social platforms</p>
         <div class="social-media">
-          <a href="#" class="social-icon" (click)="createUserViaFacebook()">
+          <div (click)="createUserViaFacebook()">
+          <a href="#" class="social-icon">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="social-icon" (click)="createUserViaGoogle()">
+          </div>
+          <div (click)="createUserViaGoogle()">
+          <a href="#" class="social-icon">
             <i class="fab fa-google"></i>
           </a>
+          </div>
+
         </div>
       </form>
       </div>

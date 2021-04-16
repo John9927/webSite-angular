@@ -7,14 +7,12 @@ import { AngularFireAuth } from '@angular/fire/auth';
   providedIn: 'root'
 })
 export class AuthService {
-  isLoggedIn = false;
   constructor(public firebaseAuth: AngularFireAuth, public router: Router,) { }
 
   /* Sign up */
   async signup(email: string, password: string) {
     await this.firebaseAuth.createUserWithEmailAndPassword(email, password)
       .then(credential => {
-        this.isLoggedIn = true
         this.router.navigateByUrl('dashboard');
         localStorage.setItem('user', JSON.stringify(credential.user))
       }, error => {
@@ -32,7 +30,6 @@ export class AuthService {
   async signin(email: string, password: string) {
     await this.firebaseAuth.signInWithEmailAndPassword(email, password)
       .then(credential => {
-        this.isLoggedIn = true
         this.router.navigateByUrl('dashboard');
         localStorage.setItem('user', JSON.stringify(credential.user))
       }, error => {
@@ -51,7 +48,6 @@ export class AuthService {
   async createUserViaGoogle() {
     await this.firebaseAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then(credential => {
-        this.isLoggedIn = true
         this.router.navigateByUrl('dashboard');
         localStorage.setItem('user', JSON.stringify(credential.user))
       }, error => {
@@ -75,11 +71,9 @@ export class AuthService {
   AuthLogin(provider) {
     return this.firebaseAuth.signInWithPopup(provider)
       .then((result) => {
-        this.isLoggedIn = true
         this.router.navigateByUrl('dashboard');
         localStorage.setItem('user', JSON.stringify(result.user))
         console.log('You have been successfully logged in!')
-        this.isLoggedIn = true;
         this.router.navigateByUrl("dashboard");
       }).catch((error) => {
         console.log(error)

@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
-import { AuthService } from './../../services/auth.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,8 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  @Output() isLogout = new EventEmitter<void>()
-  constructor(private authService: AuthService, private router: Router) { }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     if (localStorage.getItem('user')) {
@@ -17,9 +16,6 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  logout() {
-    this.authService.logout()
-    this.isLogout.emit();
-  }
+
 
 }
