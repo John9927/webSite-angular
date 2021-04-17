@@ -1,8 +1,13 @@
 <!-- Header -->
 <app-header></app-header>
 
+<!-- Filter -->
+<div class="container__filter">
+  <button (click)="onClickNome()">NOME CRESCENTE</button>
+  <button (click)="getData()">DATA DECRESCENTE</button>
+</div>
 <!-- Card -->
-<div class="card__container">
+<div class="card__container" *ngIf="false else template">
   <div *ngFor="let site of arraySiteWeb" class="card">
     <a href="{{site.urlSite}}" target="_blank">
       <div style="position: relative;">
@@ -22,3 +27,7 @@
     </a>
   </div>
 </div>
+
+<ng-template #template>
+  <app-loading></app-loading>
+</ng-template>

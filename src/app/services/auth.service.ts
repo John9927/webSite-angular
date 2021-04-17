@@ -3,16 +3,23 @@ import { Router } from '@angular/router';
 import firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
+import 'firebase/storage';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(public firebaseAuth: AngularFireAuth, public router: Router, private firestore: AngularFirestore) { }
+  storageRef;
 
+  constructor(public firebaseAuth: AngularFireAuth, public router: Router, private firestore: AngularFirestore) { }
 
   getSiteWeb() {
     return this.firestore.collection<any>("webSite", ref => ref.orderBy("date", "desc")).get();
+  }
+
+  // Filter
+  onClickNome() {
+    return this.firestore.collection<any>("webSite", ref => ref.orderBy("nome")).get();
   }
 
   /* Sign up */

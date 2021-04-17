@@ -11,9 +11,6 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
   siteWeb: any;
   arraySiteWeb = [];
-  booksCollectionRef;
-  books;
-
   constructor(private router: Router, public auth: AuthService) { }
 
   ngOnInit() {
@@ -23,16 +20,28 @@ export class DashboardComponent implements OnInit {
     this.getData();
   }
 
-
-
-
   getData() {
+    this.removeArray();
     this.auth.getSiteWeb().subscribe(res => {
       res.docs.map(doc => {
         this.siteWeb = doc.data();
         this.arraySiteWeb.push(this.siteWeb);
       })
     });
+  }
+
+  onClickNome() {
+    this.removeArray();
+    this.auth.onClickNome().subscribe(res => {
+      res.docs.map(doc => {
+        this.siteWeb = doc.data();
+        this.arraySiteWeb.push(this.siteWeb);
+      })
+    });
+  }
+
+  removeArray() {
+    this.arraySiteWeb = [];
   }
 
 

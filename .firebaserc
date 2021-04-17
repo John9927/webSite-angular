@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "giovanni-izzi-s-website": {
+      "hosting": {
+        "webSite-angular": [
+          "giovanni-izzi-s-website"
+        ]
+      }
+    }
+  }
+}
