@@ -3,8 +3,16 @@
 
 <!-- Filter -->
 <div class="container__filter">
-  <button (click)="onClickNome()">NOME CRESCENTE</button>
-  <button (click)="getData()">DATA DECRESCENTE</button>
+  <button (click)="onClickNome()" class="button__filter">
+    NOME
+    <i class="fas fa-sort-alpha-up"></i>
+  </button>
+  <button (click)="getData()">
+    <div style="display: flex;">
+      <i class="fas fa-table"></i>
+      <i class="fas fa-sort-down"></i>
+    </div>
+  </button>
 </div>
 <!-- Card -->
 <div class="card__container" *ngIf="siteWeb else template">

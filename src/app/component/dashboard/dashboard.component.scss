@@ -11,7 +11,12 @@
   color: #444;
   margin-bottom: 20px;
 }
-
+.fa-sort-alpha-up {
+  margin-left: 10px;
+}
+.fa-sort-down {
+  margin-left: 10px;
+}
 .card__date__container {
   display: flex;
   position: relative;
@@ -117,12 +122,15 @@ a {
 
 .container__filter {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 40px;
   width: 100%;
   margin-bottom: 20px;
 }
 
-
+.button__filter {
+  margin-right: 10px;
+}
 
 //
 
