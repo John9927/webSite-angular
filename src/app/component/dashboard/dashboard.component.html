@@ -7,7 +7,7 @@
   <button (click)="getData()">DATA DECRESCENTE</button>
 </div>
 <!-- Card -->
-<div class="card__container" *ngIf="false else template">
+<div class="card__container" *ngIf="siteWeb else template">
   <div *ngFor="let site of arraySiteWeb" class="card">
     <a href="{{site.urlSite}}" target="_blank">
       <div style="position: relative;">
