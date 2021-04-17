@@ -1,3 +1,4 @@
+import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthService } from './../../services/auth.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -8,16 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor(private router: Router, public auth: AuthService) { }
   siteWeb: any;
   arraySiteWeb = [];
+  booksCollectionRef;
+  books;
+
+  constructor(private router: Router, public auth: AuthService) { }
+
   ngOnInit() {
     if (localStorage.getItem('user')) {
       this.router.navigate(['dashboard']);
     }
     this.getData();
   }
+
+
 
 
   getData() {

@@ -12,7 +12,7 @@ export class AuthService {
 
 
   getSiteWeb() {
-    return this.firestore.collection('webSite').get();
+    return this.firestore.collection<any>("webSite", ref => ref.orderBy("date", "desc")).get();
   }
 
   /* Sign up */
