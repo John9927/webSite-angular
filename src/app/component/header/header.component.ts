@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
     document.getElementById('open__filter__container').style.display = 'flex';
     document.getElementById('open__filter__container').style.width = '100%';
     document.getElementById('open__filter__container').style.marginTop = '3px';
-    document.getElementById('card__container').style.marginTop = '74px';
+    document.getElementById('card__container').style.marginTop = '23px';
   }
 
 }
