@@ -7,6 +7,12 @@
           <i class="fas fa-search"></i>
         </div>
       </div>
+      <!-- Filter -->
+      <div class="filter__container" (click)="onClickFilter()">
+        <div class="filter">
+          <i class="fas fa-filter"></i>
+        </div>
+      </div>
       <div class="header__item">
         <a (click)="logout()" class="item" style="font-weight: bold">Logout</a>
       </div>
@@ -14,13 +20,15 @@
   </div>
 </div>
 
-<!-- Filter -->
-<div id="filter__container">
-  <div id="filter">
+
+<!-- Search -->
+<div id="search__container">
+  <div id="search">
     <form [formGroup]="inputText" style="width: 100%;">
-      <input formControlName="text" id="input__search" autocomplete="off" type="text" placeholder="Search..." (keyup)="applyFilter($event)">
+      <input formControlName="text" id="input__search" autocomplete="off" type="text" placeholder="Search..."
+        (keyup)="applyFilter($event)">
     </form>
-    <div class="filter__close">
+    <div class="search__close">
       <div (click)="onClickClose()">
         <i class="far fa-times-circle"></i>
       </div>

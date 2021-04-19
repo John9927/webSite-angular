@@ -44,7 +44,7 @@ a {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-right: 27px;
+  margin-right: 20px;
   align-items: center;
 }
 
@@ -53,14 +53,32 @@ a {
   height: 17px;
 }
 
-
 // Filter
+.filter__container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 20px;
+  align-items: center;
+  height: 49px;
+}
 
-#filter__container {
+.fa-filter {
+  cursor: pointer;
+  width: 15px;
+  height: 16px;
+}
+
+
+
+
+// Search
+
+#search__container {
   display: none;
 }
 
-#filter {
+#search {
   display: flex;
   background: rgb(191, 192, 191);
   width: 91%;
@@ -72,7 +90,7 @@ a {
   font-size: 20px;
 }
 
-.filter__close {
+.search__close {
   display: flex;
   height: 50px;
   justify-content: flex-end;

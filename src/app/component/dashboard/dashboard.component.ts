@@ -30,6 +30,12 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  onClickClose() {
+    document.getElementById('open__filter__container').style.display = 'none';
+    document.getElementById('card__container').style.marginTop = '25px';
+    this.auth.inputText = '';
+  }
+
   onClickNome() {
     this.removeArray();
     this.auth.onClickNome().subscribe(res => {

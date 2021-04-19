@@ -2,20 +2,30 @@
 <app-header></app-header>
 
 <!-- Filter -->
-<div class="container__filter" id="container__filter">
-  <button (click)="onClickNome()" class="button__filter">
-    NOME
-    <i class="fas fa-sort-alpha-up"></i>
-  </button>
-  <button (click)="getData()">
-    <div style="display: flex;">
-      <i class="fas fa-table"></i>
-      <i class="fas fa-sort-down"></i>
+<div id="open__filter__container">
+   <div class="open__filter">
+    <div class="container__filter" id="container__filter">
+      <button (click)="onClickNome()" class="button__filter">
+        <span class="filter__nome">NOME</span>
+        <i class="fas fa-sort-alpha-up"></i>
+      </button>
+      <button class="button__data" (click)="getData()">
+        <div style="display: flex;">
+          <i class="fas fa-table"></i>
+          <i class="fas fa-sort-down"></i>
+        </div>
+      </button>
     </div>
-  </button>
+    <div class="search__close">
+      <div style="margin: 4px 0px;" (click)="onClickClose()">
+        <i class="far fa-times-circle" style="zoom: 192%;"></i>
+      </div>
+    </div>
+  </div>
 </div>
+
 <!-- Card -->
-<div class="card__container" *ngIf="siteWeb else template">
+<div class="card__container" id="card__container" *ngIf="siteWeb else template">
   <ng-container *ngFor="let site of arraySiteWeb">
     <div class="card" *ngIf="site.nome.startsWith(auth.inputText.charAt(0).toUpperCase() + auth.inputText.slice(1))">
       <a href="{{site.urlSite}}" target="_blank">

@@ -10,6 +10,7 @@
   background-color: #fff;
   color: #444;
   margin-bottom: 20px;
+  margin-top: 25px;
 }
 .fa-sort-alpha-up {
   margin-left: 10px;
@@ -120,11 +121,58 @@ a {
 .container__filter {
   display: flex;
   justify-content: flex-start;
-  margin: 25px 45px 20px;
+  width: 100%;
+  margin-left: 20px;
+  align-items: center;
 }
 
-.button__filter {
+.button__filter, .button__data {
   margin-right: 10px;
+  border-radius: 4px;
+  height: 20px;
+  display: flex;
+  border: 0;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+
+.filter__nome {
+  align-items: center;
+  height: 16px;
+  display: flex;
+  font-weight: bold;
+}
+
+#open__filter__container {
+  display: none;
+}
+
+.open__filter {
+  display: flex;
+  width: 91%;
+  background: #989998;
+  margin: auto;
+  height: 51px;
+  border-radius: 4px;
+}
+
+.search__close {
+  display: flex;
+  height: 50px;
+  // width: 100%;
+  justify-content: flex-end;
+  padding: 6px;
+}
+
+.fa-times-circle {
+  cursor: pointer;
 }
 
 //

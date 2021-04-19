@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   constructor(public authService: AuthService, public fb: FormBuilder) { }
 
   @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
-    document.getElementById('filter__container').style.display = 'none';
+    document.getElementById('search__container').style.display = 'none';
     document.getElementById('container__filter').style.marginTop = '25px';
   }
 
@@ -31,18 +31,29 @@ export class HeaderComponent implements OnInit {
   }
 
   onClickSearch() {
-    document.getElementById('filter__container').style.position = 'absolute';
-    document.getElementById('filter__container').style.display = 'flex';
-    document.getElementById('filter__container').style.width = '100%';
-    document.getElementById('filter__container').style.marginTop = '3px';
-    document.getElementById('container__filter').style.marginTop = '74px';
+    document.getElementById('open__filter__container').style.display = 'none';
+    document.getElementById('search__container').style.position = 'absolute';
+    document.getElementById('search__container').style.display = 'flex';
+    document.getElementById('search__container').style.width = '100%';
+    document.getElementById('search__container').style.marginTop = '3px';
+    document.getElementById('card__container').style.marginTop = '74px';
   }
 
   onClickClose() {
-    document.getElementById('filter__container').style.display = 'none';
-    document.getElementById('container__filter').style.marginTop = '25px';
+    document.getElementById('search__container').style.display = 'none';
+    document.getElementById('card__container').style.marginTop = '25px';
     this.authService.inputText = '';
     this.inputText.controls['text'].setValue('');
+  }
+
+  onClickFilter() {
+    document.getElementById('search__container').style.display = 'none';
+    document.getElementById('open__filter__container').style.display = 'flex';
+    document.getElementById('open__filter__container').style.position = 'absolute';
+    document.getElementById('open__filter__container').style.width = '100%';
+    document.getElementById('open__filter__container').style.marginTop = '3px';
+    document.getElementById('open__filter__container').style.zIndex = '10';
+    document.getElementById('card__container').style.marginTop = '74px';
   }
 
 }
