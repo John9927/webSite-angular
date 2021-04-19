@@ -2,7 +2,7 @@
 <app-header></app-header>
 
 <!-- Filter -->
-<div class="container__filter">
+<div class="container__filter" id="container__filter">
   <button (click)="onClickNome()" class="button__filter">
     NOME
     <i class="fas fa-sort-alpha-up"></i>
@@ -16,26 +16,27 @@
 </div>
 <!-- Card -->
 <div class="card__container" *ngIf="siteWeb else template">
-  <div *ngFor="let site of arraySiteWeb" class="card">
-    <a href="{{site.urlSite}}" target="_blank">
-      <div style="position: relative;">
-        <img class="one" src="{{site.img}}">
-        <div class="card__container__git__hub">
-          <a class="git__hub" href="{{site.urlGit}}" target="_blank">
-            <div class="card__git__hub"><i class="fab fa-github"></i></div>
-          </a>
+  <ng-container *ngFor="let site of arraySiteWeb">
+    <div class="card" *ngIf="site.nome.startsWith(auth.inputText.charAt(0).toUpperCase() + auth.inputText.slice(1))">
+      <a href="{{site.urlSite}}" target="_blank">
+        <div style="position: relative;">
+          <img class="one" src="{{site.img}}">
+          <div class="card__container__git__hub">
+            <a class="git__hub" href="{{site.urlGit}}" target="_blank">
+              <div class="card__git__hub"><i class="fab fa-github"></i></div>
+            </a>
+          </div>
+          <div class="card__date__container">
+            {{site.date}}
+          </div>
         </div>
-        <div class="card__date__container">
-          {{site.date}}
+        <div class="card__label">
+          <span>{{site.nome}}</span>
         </div>
-      </div>
-      <div class="card__label">
-        <span>{{site.nome}}</span>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
+  </ng-container>
 </div>
-
 <ng-template #template>
   <app-loading></app-loading>
 </ng-template>

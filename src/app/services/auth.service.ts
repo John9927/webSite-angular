@@ -10,6 +10,7 @@ import 'firebase/storage';
 })
 export class AuthService {
   storageRef;
+  inputText: string = '';
 
   constructor(public firebaseAuth: AngularFireAuth, public router: Router, private firestore: AngularFirestore) { }
 

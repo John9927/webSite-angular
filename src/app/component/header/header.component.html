@@ -2,8 +2,27 @@
   <div class="header__items">
     <div class="header__logo">
       <a>LOGO</a>
+      <div class="header__search">
+        <div style="cursor: pointer;" (click)="onClickSearch()">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
       <div class="header__item">
         <a (click)="logout()" class="item" style="font-weight: bold">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter -->
+<div id="filter__container">
+  <div id="filter">
+    <form [formGroup]="inputText" style="width: 100%;">
+      <input formControlName="text" id="input__search" autocomplete="off" type="text" placeholder="Search..." (keyup)="applyFilter($event)">
+    </form>
+    <div class="filter__close">
+      <div (click)="onClickClose()">
+        <i class="far fa-times-circle"></i>
       </div>
     </div>
   </div>
