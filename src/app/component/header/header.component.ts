@@ -12,7 +12,9 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
     document.getElementById('search__container').style.display = 'none';
-    document.getElementById('container__filter').style.marginTop = '25px';
+    document.getElementById('card__container').style.marginTop = '25px';
+    document.getElementById('open__filter__container').style.display = 'none';
+
   }
 
   ngOnInit(): void {  }
