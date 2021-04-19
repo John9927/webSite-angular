@@ -134,11 +134,17 @@ a {
   border: 0;
   align-items: center;
   padding: 12px;
+  background: lightgray;
   cursor: pointer;
 
   &:focus {
     outline: none;
   }
+}
+
+.fa-times-circle {
+  width: 19px;
+  height: 17px;
 }
 
 .filter__nome {
