@@ -15,6 +15,10 @@
   align-items: center;
 }
 
+.logo {
+  margin-left: -8px;
+}
+
 .header__logo {
   display: flex;
   justify-content: flex-start;
@@ -92,5 +96,11 @@ input[type=text] {
 
 input[type=text]:focus {
   outline: none;
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    margin-left: 0px;
+  }
 }
 

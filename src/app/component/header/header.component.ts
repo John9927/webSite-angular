@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit {
     document.getElementById('filter__container').style.display = 'flex';
     document.getElementById('filter__container').style.width = '100%';
     document.getElementById('filter__container').style.marginTop = '3px';
-
     document.getElementById('container__filter').style.marginTop = '74px';
   }
 
