@@ -2,7 +2,7 @@
 <app-header></app-header>
 
 <!-- Filter -->
-<div id="open__filter__container">
+<!-- <div id="open__filter__container">
    <div class="open__filter">
     <div class="container__filter" id="container__filter">
       <button (click)="onClickNome()" class="button__filter">
@@ -19,6 +19,27 @@
     <div class="search__close">
       <div style="margin: 4px 0px;" (click)="onClickClose()">
         <i class="far fa-times-circle" style="zoom: 192%;"></i>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Search -->
+<div id="open__filter__container">
+  <div id="open__filter">
+    <button (click)="onClickNome()" class="button__filter">
+      <span class="filter__nome">NOME</span>
+      <i class="fas fa-sort-alpha-up"></i>
+    </button>
+    <button class="button__data" (click)="getData()">
+      <div style="display: flex;">
+        <i class="fas fa-table"></i>
+        <i class="fas fa-sort-down"></i>
+      </div>
+    </button>
+    <div class="search__close">
+      <div (click)="onClickClose()">
+        <i class="far fa-times-circle"></i>
       </div>
     </div>
   </div>
