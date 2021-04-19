@@ -48,11 +48,11 @@ export class HeaderComponent implements OnInit {
 
   onClickFilter() {
     document.getElementById('search__container').style.display = 'none';
-    document.getElementById('open__filter__container').style.display = 'flex';
     document.getElementById('open__filter__container').style.position = 'absolute';
+    document.getElementById('open__filter__container').style.display = 'flex';
     document.getElementById('open__filter__container').style.width = '100%';
     document.getElementById('open__filter__container').style.marginTop = '3px';
-    document.getElementById('open__filter__container').style.zIndex = '10';
+    // document.getElementById('open__filter__container').style.zIndex = '10';
     document.getElementById('card__container').style.marginTop = '74px';
   }
 

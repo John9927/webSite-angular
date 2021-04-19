@@ -29,7 +29,7 @@
   <ng-container *ngFor="let site of arraySiteWeb">
     <div class="card" *ngIf="site.nome.startsWith(auth.inputText.charAt(0).toUpperCase() + auth.inputText.slice(1))">
       <a href="{{site.urlSite}}" target="_blank">
-        <div style="position: relative;">
+        <div>
           <img class="one" src="{{site.img}}">
           <div class="card__container__git__hub">
             <a class="git__hub" href="{{site.urlGit}}" target="_blank">
