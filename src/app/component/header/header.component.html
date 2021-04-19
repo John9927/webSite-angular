@@ -2,14 +2,15 @@
   <div class="header__items">
     <div class="header__logo">
       <a class="logo">LOGO</a>
+      <!-- Search -->
       <div class="header__search">
         <div style="cursor: pointer;" (click)="onClickSearch()">
           <i class="fas fa-search"></i>
         </div>
       </div>
       <!-- Filter -->
-      <div class="filter__container" (click)="onClickFilter()">
-        <div class="filter">
+      <div class="filter__container">
+        <div style="cursor: pointer;" (click)="onClickFilter()">
           <i class="fas fa-filter"></i>
         </div>
       </div>
