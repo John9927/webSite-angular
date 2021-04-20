@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import 'firebase/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,6 @@ import 'firebase/storage';
 export class AuthService {
   storageRef;
   inputText: string = '';
-
   constructor(public firebaseAuth: AngularFireAuth, public router: Router, private firestore: AngularFirestore) { }
 
   getSiteWeb() {
@@ -22,6 +20,11 @@ export class AuthService {
   onClickNome() {
     return this.firestore.collection<any>("webSite", ref => ref.orderBy("nome")).get();
   }
+
+  onClickDark() {
+    return this.firestore.collection<any>("webSite", ref => ref.where('dark', '==', 'yes')).get();
+  }
+
 
   /* Sign up */
   async signup(email: string, password: string) {

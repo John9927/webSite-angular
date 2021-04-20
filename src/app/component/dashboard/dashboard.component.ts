@@ -45,6 +45,16 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  onClickDark() {
+    this.removeArray();
+    this.auth.onClickDark().subscribe(res => {
+      res.docs.map(doc => {
+        this.siteWeb = doc.data();
+        this.arraySiteWeb.push(this.siteWeb);
+      })
+    });
+  }
+
   removeArray() {
     this.arraySiteWeb = [];
   }
