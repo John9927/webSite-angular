@@ -33,6 +33,8 @@ export class DashboardComponent implements OnInit {
   onClickClose() {
     document.getElementById('open__filter__container').style.display = 'none';
     this.auth.inputText = '';
+    this.removeArray();
+    this.getData();
   }
 
   onClickNome() {
