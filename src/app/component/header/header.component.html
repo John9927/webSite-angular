@@ -1,7 +1,7 @@
 <div class="header__container">
   <div class="header__items">
     <div class="header__logo">
-      <a class="logo">LOGO</a>
+      <a class="logo"><i class="fas fa-blog"></i></a>
       <!-- Search -->
       <div class="header__search">
         <div style="cursor: pointer;" (click)="onClickSearch()">
@@ -15,7 +15,9 @@
         </div>
       </div>
       <div class="header__item">
-        <a (click)="logout()" class="item" style="font-weight: bold">Logout</a>
+        <div (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
       </div>
     </div>
   </div>

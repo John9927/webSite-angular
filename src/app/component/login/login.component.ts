@@ -38,13 +38,13 @@ export class LoginComponent implements OnInit {
 
   }
 
-  createUserViaGoogle() {
-    this.authService.createUserViaGoogle();
-  }
+  // createUserViaGoogle() {
+  //   this.authService.createUserViaGoogle();
+  // }
 
-  createUserViaFacebook() {
-    this.authService.FacebookAuth();
-  }
+  // createUserViaFacebook() {
+  //   this.authService.FacebookAuth();
+  // }
 
   onSlide() {
     this.sign_in_btn = document.querySelector("#sign-in-btn");

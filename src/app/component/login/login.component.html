@@ -12,7 +12,7 @@
           <input type="password" formControlName="password" placeholder="Password" #passwordSignIn />
         </div>
         <input type="submit" (click)="onSignIn(emailSignIn.value, passwordSignIn.value)" value="Login" class="btn solid" />
-        <p class="social-text">Or Sign in with social platforms</p>
+        <!-- <p class="social-text">Or Sign in with social platforms</p>
         <div class="social-media">
           <a href="#" class="social-icon" (click)="createUserViaFacebook()">
             <i class="fab fa-facebook-f"></i>
@@ -20,7 +20,7 @@
           <a href="#" class="social-icon" (click)="createUserViaGoogle()">
             <i class="fab fa-google"></i>
           </a>
-        </div>
+        </div> -->
       </form>
       <form [formGroup]="RegistrationForm" class="sign-up-form">
         <h2 class="title">Sign up</h2>
@@ -33,7 +33,7 @@
           <input type="password" formControlName="password" placeholder="Password" #passwordSignUp/>
         </div>
         <input type="submit" (click)="onSignUp(emailSignUp.value, passwordSignUp.value)" class="btn" value="Sign up"/>
-        <p class="social-text">Or Sign up with social platforms</p>
+        <!-- <p class="social-text">Or Sign up with social platforms</p>
         <div class="social-media">
           <div (click)="createUserViaFacebook()">
           <a href="" class="social-icon">
@@ -45,7 +45,7 @@
             <i class="fab fa-google"></i>
           </a>
           </div>
-        </div>
+        </div> -->
       </form>
       </div>
     </div>
