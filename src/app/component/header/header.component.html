@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="header__item">
-        <div (click)="logout()">
+        <div (click)="modal()">
           <i class="fas fa-sign-out-alt"></i>
         </div>
       </div>
@@ -23,6 +23,21 @@
   </div>
 </div>
 
+<!-- Modal Logout -->
+<div id="check__logout__container">
+  <div class="check__logout">
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <h1> Sei sicuro di voler uscire?</h1>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <button class="button__modal__logout" (click)="onClickNo()">
+        <span class="button__modal__label">NO</span></button>
+      <button class="button__modal__logout" (click)="logout()">
+        <span class="button__modal__label">SI</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- Search -->
 <div id="search__container">

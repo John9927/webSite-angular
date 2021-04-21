@@ -16,11 +16,29 @@ export class HeaderComponent implements OnInit {
     document.getElementById('open__filter__container').style.display = 'none';
   }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void {
+  }
 
   inputText = this.fb.group({
     text: ''
   });
+
+  modal() {
+    document.getElementById('check__logout__container').style.display = 'flex';
+    document.getElementById('check__logout__container').style.width = '100%';
+    document.getElementById('check__logout__container').style.height = '65vh';
+    document.getElementById('check__logout__container').style.position = 'absolute';
+    document.getElementById('check__logout__container').style.justifyContent = 'center';
+    document.getElementById('check__logout__container').style.alignItems = 'center';
+    document.getElementById('check__logout__container').style.zIndex = '20';
+    document.getElementById('card__container').style.opacity = '0.5';
+    document.getElementById('check__logout__container').style.opacity = '1';
+  }
+
+  onClickNo() {
+    document.getElementById('check__logout__container').style.display = 'none';
+    document.getElementById('card__container').style.opacity = '1';
+  }
 
   applyFilter(event: Event) {
     this.authService.inputText = (event.target as HTMLInputElement).value;
