@@ -1,31 +1,18 @@
 <app-header></app-header>
 
-<!-- <div class="card__body">
-<h5 class="card__title">Select a file for upload:</h5>
-<input type="file" (change)="upload($event)" accept=".png, .jpg"/>
-</div>
-<progress max="100" [value]="(uploadProgress | async)"></progress>
-<div class="result" *ngIf="uploadURL | async; let uploadSrc">
-  <a [href]="uploadSrc">{{uploadSrc}}</a>
-</div> -->
-
-
 <div class="card-body">
-  <h5 class="card-title">Select a file for upload:</h5>
-  <input type="file" (change)="upload($event)" accept=".png,.jpg" />
-  <br><br>
-  <div class="progress">
-    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadProgress | async) + '%'" [attr.aria-valuenow]="(uploadProgress | async)" aria-valuemin="0" aria-valuemax="100">
+  <div class="card">
+    <h5 class="card-title">Select a file for upload:</h5>
+    <div class="input-file">
+      <input type="file" (change)="upload($event)" accept=".png,.jpg" />
     </div>
-  </div>
-  <br>
-  <div class="btn-group" role="group" *ngIf="uploadState | async; let state">
-    <button type="button" class="btn btn-primary" (click)="task.pause()" [disabled]="state === 'paused'">Pause</button>
-    <button type="button" class="btn btn-primary" (click)="task.cancel()" [disabled]="!(state === 'paused' || state ==='running')">Cancel</button>
-    <button type="button" class="btn btn-primary" (click)="task.resume()" [disabled]="state === 'running'">Resume</button>
-  </div>
-  <br><br>
-  <div *ngIf="downloadURL | async; let downloadSrc" class="alert alert-info" role="alert">
-    File uploaded: <a [href]="downloadSrc">{{downloadSrc}}</a>
+    <br><br>
+    <div class="progress">
+      <progress max="100" [value]="(uploadProgress | async)"></progress>
+    </div>
+    <br><br>
+    <div class="div__download__url" *ngIf="downloadURL | async; let downloadSrc" role="alert">
+      <span class="file__span">File uploaded: </span> <a [href]="downloadSrc">{{downloadSrc}}</a>
+    </div>
   </div>
 </div>

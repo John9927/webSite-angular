@@ -15,10 +15,6 @@
   align-items: center;
 }
 
-.logo {
-  margin-left: -8px;
-}
-
 .header__logo {
   display: flex;
   justify-content: flex-start;
@@ -79,8 +75,16 @@ a {
 .fa-blog {
   width: 19px;
   height: 17px;
+  color: black;
 }
 
+.fa-cloud-upload-alt {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: black;
+}
 
 
 
@@ -169,11 +173,5 @@ input[type=text]:focus {
   align-items: center;
   width: 100%;
   font-size: 20px;
-}
-
-@media screen and (max-width: 400px) {
-  .logo {
-    margin-left: 0px;
-  }
 }
 

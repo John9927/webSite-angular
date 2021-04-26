@@ -28,24 +28,6 @@ export class LoginComponent implements OnInit {
     password: [''],
   });
 
-  async onSignIn(email: string, password: string) {
-    await this.authService.signin(email, password)
-
-  }
-
-  async onSignUp(email: string, password: string) {
-    await this.authService.signup(email, password)
-
-  }
-
-  // createUserViaGoogle() {
-  //   this.authService.createUserViaGoogle();
-  // }
-
-  // createUserViaFacebook() {
-  //   this.authService.FacebookAuth();
-  // }
-
   onSlide() {
     this.sign_in_btn = document.querySelector("#sign-in-btn");
     this.sign_up_btn = document.querySelector("#sign-up-btn");
@@ -58,7 +40,5 @@ export class LoginComponent implements OnInit {
       this.container.classList.remove("sign-up-mode");
     });
   }
-
-
 
 }
