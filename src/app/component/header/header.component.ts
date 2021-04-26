@@ -54,7 +54,7 @@ export class HeaderComponent implements OnInit {
     document.getElementById('search__container').style.position = 'absolute';
     document.getElementById('search__container').style.display = 'flex';
     document.getElementById('search__container').style.width = '100%';
-    document.getElementById('search__container').style.marginTop = '3px';
+    document.getElementById('search__container').style.marginTop = '54px';
     document.getElementById('card__container').style.marginTop = '74px';
   }
 
