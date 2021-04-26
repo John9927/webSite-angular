@@ -1,4 +1,3 @@
-import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthService } from './../../services/auth.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';

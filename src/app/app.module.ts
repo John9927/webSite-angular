@@ -11,7 +11,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LoadingComponent } from './component/loading/loading.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { UploadComponent } from './component/upload/upload.component';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     DashboardComponent,
     HeaderComponent,
-    LoadingComponent
+    LoadingComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
