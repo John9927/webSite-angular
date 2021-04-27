@@ -4,11 +4,15 @@
   <form [formGroup]="this.authService.form">
     <div class="form-group">
       <span>Dark: </span>
-      <input class="form-field" type="text" placeholder="dark" formControlName="dark">
+      <select class="form-field" id="selectDark" formControlName="selectDark">
+        <option value="" selected disabled hidden>Select Dark</option>
+        <option class="form-option" value="yes">yes</option>
+        <option class="form-option" value="no">no</option>
+      </select>
     </div>
     <div class="form-group">
       <span>Date: </span>
-      <input class="form-field" placeholder="date" formControlName="date" type="date">
+      <input class="form-field" placeholder="Date" formControlName="date" type="date">
     </div>
     <div class="form-group">
       <span>File: </span>
@@ -16,22 +20,22 @@
     </div>
     <div class="form-group" style="display: none;">
       <span>Img: </span>
-      <input class="form-field" placeholder="img" formControlName="img" type="text">
+      <input class="form-field" placeholder="Image" formControlName="img" type="text">
     </div>
     <div style="font-size: 0.1px;" *ngIf="downloadURL | async; let downloadSrc">
       <a style="text-decoration: none; color: white;" [href]="downloadSrc" #myDiv>{{downloadSrc}}</a>
     </div>
     <div class="form-group">
       <span>Nome: </span>
-      <input class="form-field" placeholder="nome" formControlName="nome" type="text">
+      <input class="form-field" placeholder="Nome" formControlName="nome" type="text">
     </div>
     <div class="form-group">
       <span>urlGit: </span>
-      <input class="form-field" placeholder="urlGit" formControlName="urlGit" type="text">
+      <input class="form-field" placeholder="UrlGit" formControlName="urlGit" type="text">
     </div>
     <div class="form-group">
       <span>urlSite: </span>
-      <input class="form-field" placeholder="urlSite" formControlName="urlSite" type="text">
+      <input class="form-field" placeholder="UrlSite" formControlName="urlSite" type="text">
     </div>
     <button style="margin-top: 10px;" class="button__submit" [disabled]="this.authService.form.invalid" (click)="onSubmit()">
       Invia

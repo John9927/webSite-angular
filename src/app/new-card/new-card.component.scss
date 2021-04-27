@@ -6,6 +6,11 @@ form {
   justify-content: center;
 }
 
+select {
+  width: 400px;
+  text-align-last:center;
+}
+
 .form__container {
   display: flex;
   margin-top: 10px;
@@ -26,6 +31,13 @@ input[type="date"] {
   text-align: center;
   cursor: pointer;
 }
+
+.form-option {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 input:disabled {
   background: #dddddd;
 }

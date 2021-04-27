@@ -39,7 +39,7 @@ export class AuthService {
   }
 
   form = this.fb.group({
-    dark: ['', Validators.required],
+    selectDark: ['', Validators.required],
     date: ['', Validators.required],
     img: ['', Validators.required],
     nome: ['', Validators.required],

@@ -17,6 +17,7 @@ export class NewCardComponent implements OnInit {
   downloadURL: Observable<string>;
   uploadState: Observable<string>;
   download;
+  selectedAlgorithm;
   constructor(public authService: AuthService, private afStorage: AngularFireStorage) { }
   @ViewChild('myDiv') myDiv: ElementRef;
 
