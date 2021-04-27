@@ -26,6 +26,9 @@ input[type="date"] {
   text-align: center;
   cursor: pointer;
 }
+input:disabled {
+  background: #dddddd;
+}
 
 @media screen and (max-width: 500px) {
   .form__container {
@@ -55,7 +58,21 @@ input[type="date"] {
 
 }
 
+// Modal Success
+#modal__success__container {
+  display: none;
+}
 
+#modal__success {
+  display: flex;
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: green;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+}
 
 
 // Custom Input

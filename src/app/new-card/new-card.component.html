@@ -33,8 +33,15 @@
       <span>urlSite: </span>
       <input class="form-field" placeholder="urlSite" formControlName="urlSite" type="text">
     </div>
-    <button style="margin-top: 10px;" class="button__submit" (click)="onSubmit()">
+    <button style="margin-top: 10px;" class="button__submit" [disabled]="this.authService.form.invalid" (click)="onSubmit()">
       Invia
     </button>
   </form>
+</div>
+
+
+<div id="modal__success__container">
+  <div id="modal__success">
+    <span style="display: flex; justify-content: center; width: 100%;">Card Creata Correttamente</span>
+  </div>
 </div>

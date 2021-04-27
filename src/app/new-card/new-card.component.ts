@@ -16,8 +16,6 @@ export class NewCardComponent implements OnInit {
   uploadProgress: Observable<number>;
   downloadURL: Observable<string>;
   uploadState: Observable<string>;
-
-  downloadSrc: any;
   download;
   constructor(public authService: AuthService, private afStorage: AngularFireStorage) { }
   @ViewChild('myDiv') myDiv: ElementRef;
@@ -28,6 +26,21 @@ export class NewCardComponent implements OnInit {
 
   onSubmit() {
     this.authService.creataData(this.authService.form.value);
+    console.log(this.authService.form.value)
+    this.authService.dateSuccess = true;
+    if(this.authService.dateSuccess == true) {
+        document.getElementById('modal__success__container').style.display = 'flex';
+        document.getElementById('modal__success__container').style.justifyContent = 'center';
+        document.getElementById('modal__success__container').style.width = '100%';
+        document.getElementById('modal__success__container').style.position = 'absolute';
+        document.getElementById('modal__success__container').style.top = '10%';
+        document.getElementById('modal__success__container').style.zIndex = '10';
+        document.getElementById('modal__success__container').addEventListener('click', () => {
+          document.getElementById('modal__success').style.display = 'none';
+        })
+    } else {
+      alert("Errore Creazione Card");
+    }
   }
 
   upload(event) {

@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   storageRef;
+  dateSuccess = false;
   inputText: string = '';
-  constructor(public firebaseAuth: AngularFireAuth, public router: Router, private firestore: AngularFirestore) { }
+  constructor(private fb: FormBuilder, public firebaseAuth: AngularFireAuth, public router: Router, private firestore: AngularFirestore) { }
 
   getSiteWeb() {
     return this.firestore.collection<any>("webSite", ref => ref.orderBy("date", "desc")).get();
@@ -37,15 +38,14 @@ export class AuthService {
     });
   }
 
-// Form
-form = new FormGroup ({
-  dark: new FormControl (''),
-  date: new FormControl (''),
-  img: new FormControl (''),
-  nome: new FormControl ('') ,
-  urlGit: new FormControl ('') ,
-  urlSite: new FormControl ('') ,
-  })
+  form = this.fb.group({
+    dark: ['', Validators.required],
+    date: ['', Validators.required],
+    img: ['', Validators.required],
+    nome: ['', Validators.required],
+    urlGit: [''],
+    urlSite: [''],
+  });
 
 
   // Add Data
@@ -55,8 +55,8 @@ form = new FormGroup ({
         .collection("webSite")
         .add(data)
         .then(res => {
-          console.log("Dato Immagazzino in Firestore Correttamente")
-         }, err => reject(err));
+          this.dateSuccess = true;
+        }, err => reject(err));
     });
   }
 }
