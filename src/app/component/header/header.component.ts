@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
@@ -7,8 +8,8 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() isLogout = new EventEmitter<void>()
-  constructor(public authService: AuthService, public fb: FormBuilder) { }
+  @Output() isLogout = new EventEmitter<void>();
+  constructor(public authService: AuthService, public fb: FormBuilder, private router: Router) { }
 
   @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
     document.getElementById('search__container').style.display = 'none';

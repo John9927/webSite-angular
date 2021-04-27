@@ -13,6 +13,7 @@ import { LoadingComponent } from './component/loading/loading.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadComponent } from './component/upload/upload.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { NewCardComponent } from './new-card/new-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     DashboardComponent,
     HeaderComponent,
     LoadingComponent,
-    UploadComponent
+    UploadComponent,
+    NewCardComponent
   ],
   imports: [
     BrowserModule,

@@ -40,7 +40,7 @@ a {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-right: 20px;
+  margin-right: 15px;
   align-items: center;
 }
 
@@ -56,7 +56,6 @@ a {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  margin-right: 20px;
   align-items: center;
   height: 49px;
 }
@@ -70,15 +69,24 @@ a {
   width: 19px;
   height: 17px;
   cursor: pointer;
+  margin-left: 15px;
 }
 
-.fa-blog {
+.fa-home {
   width: 19px;
   height: 17px;
   color: black;
 }
 
 .fa-cloud-upload-alt {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: black;
+}
+
+.fa-plus-square {
   width: 20px;
   height: 20px;
   cursor: pointer;

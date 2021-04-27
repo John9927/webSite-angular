@@ -1,7 +1,7 @@
 <div class="header__container">
   <div class="header__items">
     <div class="header__logo">
-      <a class="logo" href="./dashboard"><i class="fas fa-blog"></i></a>
+      <a class="logo" href="./dashboard"><i class="fas fa-home"></i></a>
       <!-- Search -->
       <div class="header__search">
         <div style="cursor: pointer;" (click)="onClickSearch()">
@@ -15,14 +15,19 @@
         </div>
       </div>
       <div class="header__item">
-        <div (click)="modal()">
-          <i class="fas fa-sign-out-alt"></i>
-        </div>
-      </div>
-      <div class="header__item">
         <a href="/upload">
           <i class="fas fa-cloud-upload-alt"></i>
         </a>
+      </div>
+      <div class="header__item">
+        <a href="/new">
+          <i class="far fa-plus-square"></i>
+        </a>
+      </div>
+      <div class="header__item">
+        <div (click)="modal()">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
       </div>
   </div>
 </div>
