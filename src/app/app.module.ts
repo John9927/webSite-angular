@@ -1,3 +1,4 @@
+import { DeleteComponent } from './component/delete/delete.component';
 import { environment } from './../environments/environment.prod';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -23,7 +24,8 @@ import { NewCardComponent } from './new-card/new-card.component';
     HeaderComponent,
     LoadingComponent,
     UploadComponent,
-    NewCardComponent
+    NewCardComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

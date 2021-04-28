@@ -1,3 +1,4 @@
+import { DeleteComponent } from './component/delete/delete.component';
 import { NewCardComponent } from './new-card/new-card.component';
 import { UploadComponent } from './component/upload/upload.component';
 import { GuardGuard } from './guard.guard';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [GuardGuard]  },
   { path: 'upload', component: UploadComponent },
-  { path: 'new', component: NewCardComponent }
+  { path: 'new', component: NewCardComponent },
+  { path: 'delete', component: DeleteComponent }
 
 ];
 
