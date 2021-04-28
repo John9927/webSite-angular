@@ -11,7 +11,7 @@
           <i class="fas fa-lock"></i>
           <input type="password" formControlName="password" placeholder="Password" #passwordSignIn />
         </div>
-        <input type="submit" value="Login" class="btn solid" />
+        <input type="submit"  (click)="onSignIn(emailSignIn.value, passwordSignIn.value)" value="Login" class="btn solid" />
 
       </form>
       <form [formGroup]="RegistrationForm" class="sign-up-form">
@@ -24,7 +24,7 @@
           <i class="fas fa-lock"></i>
           <input type="password" formControlName="password" placeholder="Password" #passwordSignUp/>
         </div>
-        <input type="submit" class="btn" value="Sign up"/>
+        <input type="submit" (click)="onSignUp(emailSignUp.value, passwordSignUp.value)" class="btn" value="Sign up"/>
       </form>
       </div>
     </div>
